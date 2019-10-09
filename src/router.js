@@ -29,7 +29,7 @@ export default new Router({
 
     {
       path: '/ProductPage',
-      name: 'productPage',
+      name: 'ProductPage',
       component: ProductPage
     },
     {
