@@ -4,7 +4,7 @@
 
     <main>
       <div id="page">
-        <router-link to="/ProductPage" v-for="product in products"  v-bind:key="product.Id">
+        <router-link :to="{ path: '/ActionFigures/'+ product.id}" v-for="product in products"  v-bind:key="product.Id">
           <div class="productbox" >
           <div id="imgbox">
             <img v-bind:src="product.pathImage" alt="">
