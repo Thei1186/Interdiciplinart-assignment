@@ -1,0 +1,174 @@
+body{
+    background-color: antiquewhite;
+    margin: 0 auto;
+    
+    }
+    
+    header{
+    background-color: rgb(156, 17, 17);
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    }
+    
+    
+    i.fa.fa-facebook-square, i.fa.fa-instagram, i.fa.fa-shopping-cart{
+        font-size: 30px;
+    }
+    
+    #logo{
+        width: 60%;
+        display: flex;
+        box-sizing: border-box;
+        justify-content: center;
+        
+    }
+    
+    #logo a{
+        text-decoration: none;
+        font-family: 'Bangers';
+        font-size: 50px;
+        color:rgb(255, 196, 0);
+    }
+    
+    #social_link{
+        width: 20%;
+        display: flex;
+        box-sizing: border-box;
+        justify-content: space-between;
+        padding: 0 245px 0 10px;
+    }
+    
+    #social_link a{
+        color: #faf9f5;
+    }
+    
+    #cart{
+        width: 20%;
+        display: flex;
+        box-sizing: border-box;
+        justify-content: flex-end;
+        padding: 0 10px 0 0;
+    }
+    
+    #cart a{
+        color:#faf9f5;
+    }
+    
+    main{
+        height: 1000px;
+        width: 100%;
+        background-image: url(https://images.squarespace-cdn.com/content/v1/51b3dc8ee4b051b96ceb10de/1553296372975-3P4KR6HVXSOOUA8XE2JR/ke17ZwdGBToddI8pDm48kB1t1Isis0lgscdrovTwOM4UqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYy7Mythp_T-mtop-vrsUOmeInPi9iDjx9w8K4ZfjXt2dom4-lnVJTnqGgXRGtZ7HSLM75ZQo53zn3vN1J68RrkNOpYghpI-Ha_TwZsqqmJXng/marvel_comics.jpg?format=2500w);
+        background-repeat: repeat-y;
+        background-size: 100%;
+        background-color: #c6345b;
+        display: flex;
+        box-sizing: border-box;
+        justify-content: center;
+    }
+    
+    #page{
+        margin: 100px 0 0 0;
+        width: 960px;
+        height: 800px;
+        background-color: white;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 110px 110px 110px 110px 110px 110px;
+   
+       
+    }
+    
+    footer{
+        height: 100px;
+        width: 100%;
+        background-color:rgb(255, 196, 0);
+        position: absolute;
+        z-index: 99999;
+        text-align: center;
+        padding: 5 px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: rgb(156, 17, 17);
+        
+    }
+
+    #product_item {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+        border-style: outset;
+        background-color: white;
+    }
+ 
+
+    #product_item-whitebox {
+        height: 110px;
+    }
+
+    #picturebox {
+        background-color: rgb(110, 90, 90);
+        height: 90px;
+        width: 90px;
+        margin-left: 30px;
+        border-style: solid;
+        border-color: rgb(156, 17, 17);
+        margin-top: 2.5px; 
+    
+    }
+
+    button {
+        height: 10px;
+        width: 10px;
+        margin-top: 40px;
+        margin-left: 10px;
+    }
+
+    .close {
+        justify-content: center;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    select {
+        height: 20px;
+        width: 70px;
+       margin-top: 40px;
+       margin-left: 50px;
+    }
+
+    h3 {
+        text-align: center;
+        text-align: justify;
+        margin-top: 40px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    }
+
+    h4 {
+        font-family: 'Bangers';
+        color: rgb(0, 0, 0);
+        
+    }
+
+    h4 a{
+        text-decoration: none;
+        color: rgb(255, 196, 0);
+        font-size: 22px;
+    }
+
+    p {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    footer p{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 16px;
+
+    }
