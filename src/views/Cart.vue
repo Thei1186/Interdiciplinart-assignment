@@ -1,4 +1,4 @@
-<Template>
+<template>
     <div>
         <main>
             <div id="page">
@@ -97,7 +97,7 @@
         </footer>
 
     </div>
-</Template>
+</template>
 
 <script>
     import axios from 'axios';

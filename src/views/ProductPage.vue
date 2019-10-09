@@ -4,7 +4,7 @@
         <div id="page">
             <div class="productbox" v-for="product in products" v-bind:key="product.Id">
                 <div id="imgbox">
-
+                    <img v-bind:src="product.pathImage" alt="">
 
                 </div>
             </div>

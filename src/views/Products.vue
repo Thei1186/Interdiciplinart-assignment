@@ -8,8 +8,6 @@
           <div class="productbox" >
           <div id="imgbox">
             <img v-bind:src="product.pathImage" alt="">
-            <!--{{product.pathImage}}
-            -->
 
           </div>
           <div id="titel">
