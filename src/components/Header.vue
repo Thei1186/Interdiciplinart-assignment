@@ -7,11 +7,11 @@
     </div>
 
     <div id="logo">
-        <a href="index1.html">Action Figure Shop</a>
+        <router-link to="/">Action Figure Shop</router-link>
     </div>
 
     <div id="cart">
-        <a href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+        <router-link to="/Cart"><i class="fa fa-shopping-cart"></i></router-link>
     </div>
     </header>
     </div>

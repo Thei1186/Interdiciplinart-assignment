@@ -23,8 +23,8 @@
                         </select>
                         <h2 id="price">Price</h2>
                         <div id="put_in_basket">
-                            <h3>Put in basket</h3>
-                            <a href=""><img src="https://www.onlygfx.com/wp-content/uploads/2017/06/comic-boom-explosion-2-1.png" height="175px" width="200px" alt=""></a>
+                            <router-link to"/Cart"><h3>Put in basket</h3></router-link>
+                            <router-link to="/Cart"><img src="https://www.onlygfx.com/wp-content/uploads/2017/06/comic-boom-explosion-2-1.png" height="175px" width="200px" alt=""></router-link>
                         </div>
                     </div>
             </div>

@@ -2,11 +2,6 @@
   <div id="app">
 <my-header></my-header>
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/Products">Products</router-link> |
-      <router-link to="/ActionFigures">Action figures</router-link>
-  |
-      <router-link to="/ProductPage">ProductPage</router-link> |
       <!--
           <div id="social_link">
         <a href="https://www.facebook.com/groups/DCActionFigures/"><i class="fa fa-facebook-square"></i></a>

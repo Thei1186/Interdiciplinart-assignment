@@ -5,7 +5,7 @@
 
   <div id="shop_button_container">
    <div id="shop_button">
-    <a href="index2.html"><h1>SHOP</h1></a>
+    <router-link to="/Products"><h1>SHOP</h1></router-link> 
    </div>
   </div>
 
