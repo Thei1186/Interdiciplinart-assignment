@@ -1,33 +1,42 @@
 <template>
     <div>
     <main>
-    <div id="page">
-        <div class="productbox" v-for="product in products">
-            <div id="imgbox">
-            <img v-bind:src="product.pathImage" alt="">
-          </div>
+        <div id="page">
+            <div class="largeproductbox" >
+                <div id="largeimgbox">
+                    <img v-bind:src="product.pathImage" alt="">
+                </div>
 
-         </div>
-         <div id="description">
-            <h1>{{product.name}}</h1>
-            <p>This is a description of the product. This is a description of the product.
-                This is a description of the product. This is a description of the product.
-                This is a description of the product. This is a description of the product. This is a description of the product. This is a description of the product.
-            </p> 
-            <div id="size_price_basket">
-                    <h2 id="size">Size</h2>
-                    <select>
-                            <option value="10 cm">10 cm</option>
-                            <option value="25 cm">25 cm</option>
-                            <option value="40 cm">40 cm</option>
-                    </select>
-                    <h2 id="price">Price</h2>
+            </div>
+
+            <div id="description">
+                <h1>{{product.name}}</h1>
+                <p>Material: {{product.material}}</p>
+                <p>Color: {{product.color}}</p>
+                <p>Weigth: {{product.weight}}</p> 
+                <div id="size_price_basket">
+                    <div id="size">
+                            <h2>Size</h2>
+                        <select id="størrelse">
+                                <option value="10 cm">10 cm</option>
+                                <option value="25 cm">25 cm</option>
+                                <option value="40 cm">40 cm</option>
+                        </select>
+                    </div>
+
+                    <div id="price">
+                        <h2>Price</h2>
+                        <p> 149 Kr.</p>
+                    </div>
+
                     <div id="put_in_basket">
-                        <h3>Put in basket</h3>
-                    <a href=""><img src="https://www.onlygfx.com/wp-content/uploads/2017/06/comic-boom-explosion-2-1.png" height="175px" width="200px" alt=""></a>
+                            <router-link to="/Cart"><h3>Put in basket</h3></router-link>
+                            <router-link to="/Cart"><img src="https://www.onlygfx.com/wp-content/uploads/2017/06/comic-boom-explosion-2-1.png" height="175px" width="200px" alt=""></router-link>
+                    </div>     
+
+                </div>
+        
             </div>
-            </div>
-         </div>
     </div>
 
 </main>
@@ -49,6 +58,7 @@
     data () {
        return {
            product: {},
+           basket: [],
             id: this.$route.params.id
         }
     },
@@ -60,70 +70,24 @@
               this.product = data.data;
 
             });
+        },
+        addToBasket (item) {
+            this.basket.push({
+                name: this.name,
+                description: this.description
+            })
+            console.log(this.basket)
         }
     }
   };
 </script>
 
 <style>
+
 body{
 background-color: antiquewhite;
 margin: 0 auto;
 
-}
-
-header{
-background-color: rgb(156, 17, 17);
-height: 50px;
-width: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-
-}
-
-
-i.fa.fa-facebook-square, i.fa.fa-instagram, i.fa.fa-shopping-cart{
-    font-size: 30px;
-}
-
-#logo{
-    width: 60%;
-    display: flex;
-    box-sizing: border-box;
-    justify-content: center;
-    
-}
-
-#logo a{
-    text-decoration: none;
-    font-family: 'Bangers';
-    font-size: 50px;
-    color:rgb(255, 196, 0);
-}
-
-#social_link{
-    width: 20%;
-    display: flex;
-    box-sizing: border-box;
-    justify-content: space-between;
-    padding: 0 245px 0 10px;
-}
-
-#social_link a{
-    color: #faf9f5;
-}
-
-#cart{
-    width: 20%;
-    display: flex;
-    box-sizing: border-box;
-    justify-content: flex-end;
-    padding: 0 10px 0 0;
-}
-
-#cart a{
-    color:#faf9f5;
 }
 
 main{
@@ -150,7 +114,7 @@ main{
     align-content: flex-start;
 }
 
-.productbox{
+.largeproductbox{
     height: 400px;
     width: 350px;
     background-color:  rgb(156, 17, 17);
@@ -164,7 +128,7 @@ main{
     
 }
 
-#imgbox{
+#largeimgbox{
     height: 390px;
     width: 340px;
     background-color: rgb(110, 90, 90);
@@ -190,7 +154,7 @@ footer{
     
 }
 
-#imgbox img{
+#largeimgbox img{
     height: 390px;
     width: 340px;
 }
@@ -206,32 +170,36 @@ footer{
 
 h1 {
     font-size: 3em;
-    margin: 0 0 0 37.5%;
+    margin: 0;
     font-family: 'Bangers';
     color: rgb(255, 196, 0);
 }
 
 #description p {
     font-size: 1em;
-    margin: 40px 20px 0 20px;
+    margin: 10px 20px 0 20px;
+    font: inherit;
 }
 
-select {
-    margin: 75px 0 0 -150px;
-}
 
 #put_in_basket {
-    height: 100px;
-    width: 125px;
+    height: 150px;
+    width: 200px;
     justify-content: center;
     align-items: center;
     display: flex;
     border-radius: 25px;
-    margin: 10px 0 0 0;
+    margin: 0 0 0 0;
 }
 
-h3 {
-    margin: -5px 0 0 -2.5px;
+#put_in_basket img{
+height: 150px;
+width: 200px;
+margin-top: 30px;
+}
+
+#put_in_basket h3{
+    margin: 0 0 0 50px;
     font-family: 'Bangers';
     color: rgb(156, 17, 17);
     font-size: 20px;
@@ -245,4 +213,12 @@ h3 {
     margin: 120px 0 0 0;
     justify-content: space-around;
 }
+
+#størrelse {
+    margin: 10px 0 0 25px;
+    border: 1px solid black;
+    
+}
+
+
 </style>

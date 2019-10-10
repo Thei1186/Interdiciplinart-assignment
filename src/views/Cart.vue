@@ -7,78 +7,40 @@
                 </div>
                 <div id="product_item">
                     <div id="picturebox">
-                        <img src="img/81W8fYcOLFL._SL1500_.jpg" alt="Iron Man">
+                        <img src="https://media.entertainmentearth.com/assets/images/65479ec5f8dd4f589df9484d096cb256lg.jpg?fbclid=IwAR0WoigtVBK1BhkEmwi1KpDj-meXW7AVfs8da_oujrYCOlnjvWtSWivvYTc" alt="Iron Man">
                     </div>
                     <h4>
-                        <a href="productpage.html">product page (Iron Man)</a>
-                        <p>description</p>
+                        <a href="productpage.html">Iron Man</a>
+                        <p>Material: Plastic, 
+                            Color: Red, 
+                            Weigth: 30</p>
                     </h4>
                     <select>
-                        <option value="select">select</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
                     </select>
-                    <button type="button" class="close" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    
                     <h3>Price</h3>
+                    <h3>149 kr.</h3>
+
                 </div>
-                <div id="product_item">
-                    <div id="picturebox">
-                        <img src="" alt="">
-                    </div>
-                    <h4>
-                        <a href="#">product page</a>
-                        <p>description</p>
-                    </h4>
-                    <select>
-                        <option value="select">select</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                    </select>
-                    <button type="button" class="close" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h3>Price</h3>
-                </div>
-                <div id="product_item">
-                    <div id="picturebox">
-                        <img src="" alt="">
-                    </div>
-                    <h4>
-                        <a href="#">product page</a>
-                        <p>description</p>
-                    </h4>
-                    <select>
-                        <option value="select">select</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                    </select>
-                    <button type="button" class="close" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h3>Price</h3>
-                </div>
+                
+                
                 <div id="product_item-whitebox"></div>
                 <div id="product_item-whitebox_2">
                     <div id="empty_box"></div>
                     <div id="total">
                         <h5></h5>
                         <h5></h5>
+                        <h5>Price</h5>
+                        <h5> 149 kr.</h5>
+                        <h5> Delivery</h5>
+                        <h5>Free delivery</h5>
                         <h5>Subtotal</h5>
-                        <h5>kr.</h5>
-                        <h5> All forms of delivery</h5>
-                        <h5>free delivery</h5>
-                        <h5>Total price (incl. VAT)</h5>
-                        <h5>kr.</h5>
-                        <h5>(excl. VAT)</h5>
-                        <h5>kr.</h5>
+                        <h5> 149 kr.</h5>
+                        
                     </div>
 
                 </div>
@@ -128,60 +90,6 @@
 
     }
 
-    header{
-        background-color: rgb(156, 17, 17);
-        height: 50px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-    }
-
-
-    i.fa.fa-facebook-square, i.fa.fa-instagram, i.fa.fa-shopping-cart{
-        font-size: 30px;
-    }
-
-    #logo{
-        width: 60%;
-        display: flex;
-        box-sizing: border-box;
-        justify-content: center;
-
-    }
-
-    #logo a{
-        text-decoration: none;
-        font-family: 'Bangers';
-        font-size: 50px;
-        color:rgb(255, 196, 0);
-    }
-
-    #social_link{
-        width: 20%;
-        display: flex;
-        box-sizing: border-box;
-        justify-content: space-between;
-        padding: 0 245px 0 10px;
-    }
-
-    #social_link a{
-        color: #faf9f5;
-    }
-
-    #cart{
-        width: 20%;
-        display: flex;
-        box-sizing: border-box;
-        justify-content: flex-end;
-        padding: 0 10px 0 0;
-    }
-
-    #cart a{
-        color:#faf9f5;
-    }
-
     main{
         height: 1000px;
         width: 100%;
@@ -194,7 +102,7 @@
         justify-content: center;
     }
 
-    #page{
+     #page{
         margin: 100px 0 0 0;
         width: 960px;
         height: 1000px;
@@ -205,6 +113,8 @@
 
 
     }
+
+   
 
     footer{
         height: 100px;
@@ -222,7 +132,7 @@
     #product_item {
         display: grid;
         grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
-        grid-gap: 10px;
+        grid-gap: 29px;
         border-style: outset;
         background-color: white;
     }
@@ -230,6 +140,7 @@
 
     #product_item-whitebox {
         height: 110px;
+        
     }
 
     #product_item-whitebox_2 {
@@ -280,21 +191,22 @@
     select {
         height: 20px;
         width: 70px;
-        margin-top: 40px;
-        margin-left: 50px;
+        margin: 30px 0 0 0;
+        
+        
     }
 
     h3 {
         text-align: center;
         text-align: justify;
-        margin-top: 40px;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
+        margin: 30px 30px 0 0;
     }
 
     h4 {
         font-family: 'Bangers';
         color: rgb(0, 0, 0);
+        margin: 25px 0 0 0;
 
     }
 
@@ -302,11 +214,13 @@
         text-decoration: none;
         color: rgb(255, 196, 0);
         font-size: 22px;
+        margin: 25px 0 0 0;
     }
 
     p {
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         font-size: 12px;
+        
     }
 
     footer p{
@@ -328,7 +242,7 @@
 
     #checkout {
         position: absolute;
-        margin: 60px 0 0 130px;
+        margin: 60px 0 0 35px;
         font-family: 'Bangers';
         font-size: 30px;
         text-decoration: none;

@@ -1,9 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import ActionFiguresList from "./views/ActionFigures/ActionFigureList";
 import ActionFiguresDetails from "./views/ActionFigures/ActionFigureDetails";
-import ProductPage from "./views/ProductPage";
 import Cart from "./views/Cart";
 
 Vue.use(Router)
@@ -23,19 +21,9 @@ export default new Router({
       component: Cart
     },
     {
-      path: '/ActionFigures',
-      name: 'ActionFigures',
-      component: ActionFiguresList
-    },
-    {
       path: '/ActionFigures/:id',
       name: 'ActionFiguresDetails',
       component: ActionFiguresDetails
-    },
-    {
-      path: '/ProductPage',
-      name: 'ProductPage',
-      component: ProductPage
     },
     {
       path: '/Products',

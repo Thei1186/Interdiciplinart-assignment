@@ -15,15 +15,17 @@
                         This is a description of the product. This is a description of the product. This is a description of the product. This is a description of the product.
                     </p>
                     <div id="size_price_basket">
-                        <h2 id="size">Size</h2>
+                        <div id="size">
+                        <h2>Size</h2>
                         <select>
                             <option value="10 cm">10 cm</option>
                             <option value="25 cm">25 cm</option>
                             <option value="40 cm">40 cm</option>
                         </select>
+                        </div>
                         <h2 id="price">Price</h2>
                         <div id="put_in_basket">
-                            <router-link to"/Cart"><h3>Put in basket</h3></router-link>
+                            <router-link to="/Cart"><h3>Put in basket</h3></router-link>
                             <router-link to="/Cart"><img src="https://www.onlygfx.com/wp-content/uploads/2017/06/comic-boom-explosion-2-1.png" height="175px" width="200px" alt=""></router-link>
                         </div>
                     </div>
@@ -69,62 +71,8 @@
 
     body{
         background-color: antiquewhite;
-        margin: 0 auto;
+        margin: 0;
 
-    }
-
-    header{
-        background-color: rgb(156, 17, 17);
-        height: 50px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-    }
-
-
-    i.fa.fa-facebook-square, i.fa.fa-instagram, i.fa.fa-shopping-cart{
-        font-size: 30px;
-    }
-
-    #logo{
-        width: 60%;
-        display: flex;
-        box-sizing: border-box;
-        justify-content: center;
-
-    }
-
-    #logo a{
-        text-decoration: none;
-        font-family: 'Bangers';
-        font-size: 50px;
-        color:rgb(255, 196, 0);
-    }
-
-    #social_link{
-        width: 20%;
-        display: flex;
-        box-sizing: border-box;
-        justify-content: space-between;
-        padding: 0 245px 0 10px;
-    }
-
-    #social_link a{
-        color: #faf9f5;
-    }
-
-    #cart{
-        width: 20%;
-        display: flex;
-        box-sizing: border-box;
-        justify-content: flex-end;
-        padding: 0 10px 0 0;
-    }
-
-    #cart a{
-        color:#faf9f5;
     }
 
     main{
@@ -207,7 +155,7 @@
 
     h1 {
         font-size: 3em;
-        margin: 0 0 0 37.5%;
+        margin: 0;
         font-family: 'Bangers';
         color: rgb(255, 196, 0);
     }
@@ -217,28 +165,17 @@
         margin: 40px 20px 0 20px;
     }
 
-    select {
-        margin: 75px 0 0 -150px;
-    }
-
-    #size {
-    }
-
-    #price {
-    }
-
     #put_in_basket {
         height: 100px;
         width: 125px;
         justify-content: center;
         align-items: center;
         display: flex;
-        border-radius: 25px;
         margin: 10px 0 0 0;
     }
 
     h3 {
-        margin: -5px 0 0 -2.5px;
+        margin: -50px 0 0 -2.5px;
         font-family: 'Bangers';
         color: rgb(156, 17, 17);
         font-size: 20px;
@@ -250,7 +187,117 @@
         width: 100%;
         display: flex;
         margin: 120px 0 0 0;
-        justify-content: space-around;
     }
 
+    #size {
+        height: 40px;
+        width: 50px;
+        display:flex;
+    }
+
+body {
+    background-color: rgb(255, 196, 0);;
+    margin: 0;
+}
+
+#shop_button_container {
+    display: flex;
+    left:45%;
+    top:70%;
+    position: absolute;
+    z-index: 9999;
+}
+#shop_button {
+    height: 80px;
+    width: 180px;
+    background-color: rgb(180, 27, 27);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 25px;
+    border: 3px solid white;
+    padding: 0 105px 0 0;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Bangers';
+    font-size: 25px;
+    color:rgb(255, 196, 0);
+}
+
+#shop {
+  margin: 0 0 0 100px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    max-width: 1920px;
+  }
+  
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators 
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 3s ease;
+  }
+  */
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 10s;
+    animation-name: fade;
+    animation-duration: 10s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .75} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .75} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+  }
+
+  footer{
+    height: 100px;
+    width: 100%;
+    background-color:rgb(255, 196, 0);
+    position: absolute;
+    z-index: 99999;
+    text-align: center;
+    padding: 15px 0 0 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(156, 17, 17);   
+}
+
+main{
+  height: 800px;
+  width: 100%;
+  margin: 0;
+  }
+  
 </style>

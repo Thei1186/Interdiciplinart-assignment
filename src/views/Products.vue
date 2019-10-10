@@ -61,59 +61,7 @@
 
   }
 
-  header{
-    background-color: rgb(156, 17, 17);
-    height: 50px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-  }
-
-
-  i.fa.fa-facebook-square, i.fa.fa-instagram, i.fa.fa-shopping-cart{
-    font-size: 30px;
-  }
-
-  #logo{
-    width: 60%;
-    display: flex;
-    box-sizing: border-box;
-    justify-content: center;
-
-  }
-
-  #logo a{
-    text-decoration: none;
-    font-family: 'Bangers';
-    font-size: 50px;
-    color:rgb(255, 196, 0);
-  }
-
-  #social_link{
-    width: 20%;
-    display: flex;
-    box-sizing: border-box;
-    justify-content: space-between;
-    padding: 0 245px 0 10px;
-  }
-
-  #social_link a{
-    color: #faf9f5;
-  }
-
-  #cart{
-    width: 20%;
-    display: flex;
-    box-sizing: border-box;
-    justify-content: flex-end;
-    padding: 0 10px 0 0;
-  }
-
-  #cart a{
-    color:#faf9f5;
-  }
+  
 
   main{
     height: 1000px;
