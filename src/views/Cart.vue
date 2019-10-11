@@ -2,6 +2,7 @@
     <div>
         <main>
             <div id="page">
+                <router-link :to="{ path: '/Products/'}"><a><i class="fa fa-arrow-circle-left"></i></a></router-link>
                 <div v-for="product in basket" v-bind:key="product.id">
                 </div>
                 <div id="product_item-whitebox">
@@ -123,6 +124,12 @@
 
 
     }
+
+     .fa.fa-arrow-circle-left{
+         font-size: 30px;
+         margin: 10px 0 0 10px;
+         color: rgb(156, 17, 17);
+     }
 
    
 
