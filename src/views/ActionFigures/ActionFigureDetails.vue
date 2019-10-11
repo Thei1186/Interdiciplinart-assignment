@@ -13,7 +13,7 @@
                 <h1>{{product.name}}</h1>
                 <p>Material: {{product.material}}</p>
                 <p>Color: {{product.color}}</p>
-                <p>Weigth: {{product.weight}}</p> 
+                <p>Weight: {{product.weight}}</p>
                 <div id="size_price_basket">
                     <div id="size">
                             <h2>Size</h2>
@@ -26,12 +26,12 @@
 
                     <div id="price">
                         <h2>Price</h2>
-                        <p> 149 Kr.</p>
+                        <p> {{product.price}}</p>
                     </div>
 
                     <div id="put_in_basket">
-                            <router-link to="/Cart"><h3>Put in basket</h3></router-link>
-                            <router-link to="/Cart"><img src="https://www.onlygfx.com/wp-content/uploads/2017/06/comic-boom-explosion-2-1.png" height="175px" width="200px" alt=""></router-link>
+                            <a v-on:click="addToBasket"><h3>Put in basket</h3></a>
+                            <a><img src="https://www.onlygfx.com/wp-content/uploads/2017/06/comic-boom-explosion-2-1.png" height="175px" width="200px" alt=""></a>
                     </div>     
 
                 </div>
@@ -71,12 +71,14 @@
 
             });
         },
-        addToBasket (item) {
-            this.basket.push({
-                name: this.name,
-                description: this.description
-            })
-            console.log(this.basket)
+        addToBasket () {
+            if(!localStorage.getItem('basket') || localStorage.getItem('basket') === '') {
+                localStorage.setItem('basket', JSON.stringify([]))
+            }
+            let basket = JSON.parse(localStorage.getItem('basket'));
+            basket.push(this.product);
+            localStorage.setItem('basket', JSON.stringify(basket))
+            this.$router.push({name:'cart'})
         }
     }
   };

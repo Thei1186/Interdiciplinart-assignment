@@ -2,18 +2,20 @@
     <div>
         <main>
             <div id="page">
+                <div v-for="product in basket" v-bind:key="product.id">
+                </div>
                 <div id="product_item-whitebox">
 
                 </div>
-                <div id="product_item">
-                    <div id="picturebox">
-                        <img src="https://media.entertainmentearth.com/assets/images/65479ec5f8dd4f589df9484d096cb256lg.jpg?fbclid=IwAR0WoigtVBK1BhkEmwi1KpDj-meXW7AVfs8da_oujrYCOlnjvWtSWivvYTc" alt="Iron Man">
+                <div id="product_item" v-for="product in basket" v-bind:key="product.id">
+                    <div id="picturebox" >
+                        <img v-bind:src="product.pathImage" :alt = "product.name">
                     </div>
                     <h4>
-                        <a href="productpage.html">Iron Man</a>
-                        <p>Material: Plastic, 
-                            Color: Red, 
-                            Weigth: 30</p>
+                        <router-link :to="{ path: '/ActionFigures/'+ product.id}"><a>{{product.name}}</a></router-link>
+                        <p>Material: {{product.material}},
+                            Color: {{product.color}},
+                            Weight: {{product.weight}}</p>
                     </h4>
                     <select>
                         <option value="1">1</option>
@@ -23,11 +25,11 @@
                     </select>
                     
                     <h3>Price</h3>
-                    <h3>149 kr.</h3>
+                    <h3>{{product.price}}</h3>
 
                 </div>
-                
-                
+
+
                 <div id="product_item-whitebox"></div>
                 <div id="product_item-whitebox_2">
                     <div id="empty_box"></div>
@@ -35,18 +37,18 @@
                         <h5></h5>
                         <h5></h5>
                         <h5>Price</h5>
-                        <h5> 149 kr.</h5>
+                        <h5> {{totalPrice}}</h5>
                         <h5> Delivery</h5>
                         <h5>Free delivery</h5>
                         <h5>Subtotal</h5>
-                        <h5> 149 kr.</h5>
+                        <h5> {{totalPrice}}</h5>
                         
                     </div>
 
                 </div>
                 <div id="payment">
-                    <a href=""><h3 id="checkout">Checkout</h3></a>
-                    <a href=""><img src="data:image/png;base64,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" height="80px" width="170px" alt=""></a>
+                    <a v-on:click="order"><h3 id="checkout">Checkout</h3></a>
+                    <a v-on:click="order"><img src="data:image/png;base64,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" height="80px" width="170px" alt=""></a>
                 </div>
             </div>
         </main>
@@ -62,23 +64,31 @@
 </template>
 
 <script>
-    import axios from 'axios';
     export default {
         mounted() {
             this.fetchProducts()
         },
         data: ()  => ({
-            products: []
+            basket: [],
+            totalPrice:0
         }),
         methods: {
             fetchProducts() {
+                if(!localStorage.getItem('basket') || localStorage.getItem('basket') === '') {
+                    localStorage.setItem('basket', JSON.stringify([]))
+                }
+                this.basket = JSON.parse(localStorage.getItem('basket'));
+                this.basket.forEach(product => {
+                    this.totalPrice += product.price
+                })
 
-                axios.get('https://actionfigureshop.azurewebsites.net/api/ActionFigure')
-                    .then((data) => {
-                        this.products = data.data;
-                    });
+            },
+            order() {
+                localStorage.setItem('basket', JSON.stringify([]))
+                this.basket = [];
+                this.totalPrice = 0;
+            },
 
-            }
         }
     };
 </script>
@@ -140,7 +150,6 @@
 
     #product_item-whitebox {
         height: 110px;
-        
     }
 
     #product_item-whitebox_2 {
@@ -150,7 +159,6 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
-
     }
 
     #picturebox {
@@ -161,7 +169,7 @@
         border-style: solid;
         border-color: rgb(156, 17, 17);
         margin-top: 2.5px;
-
+        position: relative;
     }
 
     #total {
