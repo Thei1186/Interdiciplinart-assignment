@@ -127,7 +127,7 @@
 
      .fa.fa-arrow-circle-left{
          font-size: 30px;
-         margin: 10px 0 0 10px;
+         margin: 10px 0 10px 10px;
          color: rgb(156, 17, 17);
      }
 

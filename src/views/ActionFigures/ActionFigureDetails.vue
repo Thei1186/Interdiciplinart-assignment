@@ -2,6 +2,7 @@
     <div>
     <main>
         <div id="page">
+            <router-link :to="{ path: '/Products/'}"><a><i class="fa fa-arrow-circle-left"></i></a></router-link>
             <div class="largeproductbox" >
                 <div id="largeimgbox">
                     <img v-bind:src="product.pathImage" alt="">
